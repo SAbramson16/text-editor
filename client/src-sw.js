@@ -28,12 +28,9 @@ registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
 registerRoute(({ request }) => ['style', 'script', 'worker'].includes(request.destination),
-// maybe this needs to be cachefirst instead?
-new StaleWhileRevalidate({
-  // Name of the cache storage.
+new CacheFirst({
   cacheName: 'asset-cache',
   plugins: [
-    // This plugin will cache responses with these headers to a maximum-age of 30 days
     new CacheableResponsePlugin({
       statuses: [0, 200],
     }),
