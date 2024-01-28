@@ -2,12 +2,19 @@
 
 ## Description
 
+This application is a text editor that runs in the browser. The user is able to install the application and use it offline as well.
 
 ## Installation
 
+The client folder holds the javascript files that create functionality for the application, styling sheet and images, as well as the configuration file for the Webpack plugin. 
+The server folder has the server.js which creates the connection to the server, as well as the routes folder. 
+Check package.json for dependencies and devDependencies, and install with "npm install". 
 
 ## Usage
 
+Once the dependencies are installed, the application can be used locally. Alternatively, the application is deployed on render.com and can be found at this URL: https://jate-text-editor-vpth.onrender.com/
+
+![Alt text](./assets/text-editor%20screenshot.png)
 
 ## Credits
 
